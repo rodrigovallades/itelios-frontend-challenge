@@ -1,0 +1,17 @@
+@import "../styles/base/_mixins";
+
+.container {
+  padding: 5px;
+
+  @include breakpoint(medium) {
+    max-width: 730px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include breakpoint(large) {
+    max-width: 1236px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

@@ -15,13 +15,17 @@
 
   &__image {
     text-align: center;
+    position: relative;
+    background: no-repeat url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAAAqklEQVR4AeyMsQ2EQAwEt5QPvg9iaIGEIki4BOcnaBnQSQ7QCOtAhIyz8e7qJh+Nkqzy0pG+YNF281YRtYjVXCcwPRpKAvZoyN4a+oaM1v310IB4Lj6HHkOs5AqPIVZypeeQv07x+bjY/wV+8orHx1IeY0/MX6c4KvDAyovxLfbE/IV45HsB8wrjgd9HzywyahANC38PsgzypE4F2Ysrv9mRUmUDVZMERgEAU2liBwe1QL4AAAAASUVORK5CYII=') 50% 50%;
+    min-height: 36px;
 
     @include breakpoint(medium) {
-      height: 186px;
+      height: 175px;
     }
   }
 
   &__name {
+    margin-top: 25px;
     font-size: 1rem;
     display: block;
     display: -webkit-box;
@@ -32,7 +36,7 @@
   }
 
   &__price {
-    margin-top: 22px;
+    margin-top: 25px;
     color: $subtleAccent;
 
     span {
@@ -43,7 +47,7 @@
 
   &__conditions {
     color: $subtleAccent;
-    margin-top: 20px;
+    margin-top: 17px;
   }
 
   &__actions {
@@ -80,7 +84,7 @@
       }
 
       @include breakpoint(large) {
-        padding: 12px 10px 10px 10px;
+        padding: 16px 10px 14px 10px;
         font-size: 1.25rem;
 
         &:hover {

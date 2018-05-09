@@ -1,4 +1,22 @@
 @import "../styles/base/_mixins";
+@import "../styles/base/_variables";
+
+#app {
+  h2 {
+    font-size: 1.25rem;
+    color: $subtleAccent2;
+    font-weight: 700;
+    margin: 10px;
+
+    @include breakpoint(medium) {
+      margin: 20px 0;
+    }
+
+    @include breakpoint(large) {
+      font-size: 1.75rem;
+    }
+  }
+}
 
 .container {
   padding: 5px;
@@ -30,27 +48,42 @@ products {
 visited {
   display: block;
   @include breakpoint(medium) {
-    flex: 0 0 25%;
+    flex: 0 0 33%;
     min-height: 0;
     min-width: 0;
+  }
+
+  @include breakpoint(large) {
+    flex: 0 0 25%;
   }
 }
 
 recommendation {
   display: block;
+
   @include breakpoint(medium) {
+    flex: 0 0 67%;
+    min-height: 0;
+    min-width: 0;
+
+    & .list {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow: hidden;
+    }
+
+    & .product {
+      border-left: 0;
+      flex: 0 0 calc(100% / 2);
+    }
+  }
+  @include breakpoint(large) {
     flex: 0 0 75%;
     min-height: 0;
     min-width: 0;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow: hidden;
 
-    & > .product {
-      border-left: 0;
+    & .product {
       flex: 0 0 calc(100% / 3);
-      min-height: 0;
-      min-width: 0;
     }
   }
 }

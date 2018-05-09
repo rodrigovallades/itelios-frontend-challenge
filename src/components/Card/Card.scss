@@ -57,12 +57,13 @@
       font-weight: 700;
       color: $subtleAccent2;
       text-transform: lowercase;
-      padding: 12px 10px 10px 10px;
+      padding: 12px 4px 6px 4px;
       line-height: 24px;
-      font-size: 1.25rem;
 
-      &:hover {
-        background: -webkit-linear-gradient(top, rgb(243, 243, 243), rgb(255, 255, 255) 426px);
+
+      @include breakpoint(large) {
+        padding: 12px 10px 10px 10px;
+        font-size: 1.25rem;
       }
 
       & > * {

@@ -19,6 +19,14 @@ export class Carousel {
     return productsHtml;
   }
 
+  renderBullets() {
+    let bulletsHtml = ``
+    this.items.map((product, index) => {
+      bulletsHtml += `<button class="glide__bullet" data-glide-dir="=${index}"></button>`
+    });
+    return bulletsHtml;
+  }
+
   init() {
     const glide = new Glide('.glide', {
       type: 'carousel',
@@ -45,9 +53,7 @@ export class Carousel {
             ${this.renderItems()}
           </div>
           <div class="glide__bullets" data-glide-el="controls[nav]">
-            <button class="glide__bullet" data-glide-dir="=0"></button>
-            <button class="glide__bullet" data-glide-dir="=1"></button>
-            <button class="glide__bullet" data-glide-dir="=2"></button>
+            ${this.renderBullets()}
           </div>
         </div>
       </div>`

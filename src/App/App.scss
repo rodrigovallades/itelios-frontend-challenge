@@ -4,6 +4,7 @@
   padding: 5px;
 
   @include breakpoint(medium) {
+    padding: 0;
     max-width: 730px;
     margin-left: auto;
     margin-right: auto;
@@ -13,5 +14,43 @@
     max-width: 1236px;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+products {
+  @include breakpoint(medium) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 0;
+    min-width: 0;
+  }
+}
+
+visited {
+  display: block;
+  @include breakpoint(medium) {
+    flex: 0 0 25%;
+    min-height: 0;
+    min-width: 0;
+  }
+}
+
+recommendation {
+  display: block;
+  @include breakpoint(medium) {
+    flex: 0 0 75%;
+    min-height: 0;
+    min-width: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+
+    & > .product {
+      border-left: 0;
+      flex: 0 0 calc(100% / 3);
+      min-height: 0;
+      min-width: 0;
+    }
   }
 }

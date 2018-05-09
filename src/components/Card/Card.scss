@@ -1,0 +1,74 @@
+@import "../../styles/base/_mixins";
+@import "../../styles/base/_variables";
+
+.product {
+  border: 1px solid #EBE9EA;
+  padding: 22px;
+
+  &:hover {
+    background: -webkit-linear-gradient(top, rgb(243, 243, 243), rgb(255, 255, 255) 426px);
+
+    & > .product__actions {
+      display: block;
+    }
+  }
+
+  &__image {
+    text-align: center;
+
+    @include breakpoint(medium) {
+      height: 186px;
+    }
+  }
+
+  &__name {
+    font-size: 1rem;
+    display: block;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__price {
+    margin-top: 22px;
+    color: $subtleAccent;
+
+    span {
+      font-size: 1.375rem;
+      font-weight: 700;
+    }
+  }
+
+  &__conditions {
+    color: $subtleAccent;
+    margin-top: 20px;
+  }
+
+  &__actions {
+    display: none;
+
+    &--add {
+      cursor: pointer;
+      margin-top: 25px;
+      border: 1px solid #D3D3D3;
+      text-align: center;
+      font-weight: 700;
+      color: $subtleAccent2;
+      text-transform: lowercase;
+      padding: 12px 10px 10px 10px;
+      line-height: 24px;
+      font-size: 1.25rem;
+
+      &:hover {
+        background: -webkit-linear-gradient(top, rgb(243, 243, 243), rgb(255, 255, 255) 426px);
+      }
+
+      & > * {
+        display: inline-flex;
+        vertical-align: middle;
+      }
+    }
+  }
+}

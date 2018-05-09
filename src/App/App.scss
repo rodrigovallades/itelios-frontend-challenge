@@ -2,6 +2,13 @@
 @import "../styles/base/_variables";
 
 #app {
+  background-color: #fff;
+
+  @include breakpoint(medium) {
+    height: 627px;
+    box-shadow: 0 5px 20px 0 rgba(0,0,0,.35);
+  }
+
   h2 {
     font-size: 1.25rem;
     color: $subtleAccent2;
@@ -20,19 +27,6 @@
 
 .container {
   padding: 5px;
-
-  @include breakpoint(medium) {
-    padding: 0;
-    max-width: 730px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  @include breakpoint(large) {
-    max-width: 1236px;
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
 
 products {
@@ -42,6 +36,15 @@ products {
     flex-wrap: wrap;
     min-height: 0;
     min-width: 0;
+    max-width: 730px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include breakpoint(large) {
+    max-width: 1236px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

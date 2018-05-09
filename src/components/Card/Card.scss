@@ -47,7 +47,7 @@
   }
 
   &__actions {
-    display: none;
+
 
     &--add {
       cursor: pointer;
@@ -57,13 +57,37 @@
       font-weight: 700;
       color: $subtleAccent2;
       text-transform: lowercase;
-      padding: 12px 4px 6px 4px;
+      padding: 12px 0 6px 0;
       line-height: 24px;
+      position: relative;
 
+      &:hover {
+        color: #000;
+
+        & .material-icons {
+          color: $mainAccent;
+        }
+        &:before {
+          display: block;
+          content: ' ';
+          width: 4px;
+          background-color: $mainAccent;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+        }
+      }
 
       @include breakpoint(large) {
         padding: 12px 10px 10px 10px;
         font-size: 1.25rem;
+
+        &:hover {
+          &:before {
+            width: 10px;
+          }
+        }
       }
 
       & > * {

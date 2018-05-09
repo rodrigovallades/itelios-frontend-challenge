@@ -36,13 +36,13 @@ products {
     flex-wrap: wrap;
     min-height: 0;
     min-width: 0;
-    max-width: 730px;
+    max-width: 760px;
     margin-left: auto;
     margin-right: auto;
   }
 
   @include breakpoint(large) {
-    max-width: 1236px;
+    max-width: 1233px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -64,6 +64,10 @@ visited {
 recommendation {
   display: block;
 
+  & .product {
+    margin-bottom: 5px;
+  }
+
   @include breakpoint(medium) {
     flex: 0 0 67%;
     min-height: 0;
@@ -76,6 +80,7 @@ recommendation {
     }
 
     & .product {
+      margin-bottom: 0;
       border-left: 0;
       flex: 0 0 calc(100% / 2);
     }

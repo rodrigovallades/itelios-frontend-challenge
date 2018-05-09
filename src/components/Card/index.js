@@ -1,3 +1,5 @@
+// the "Card" module is used to construct each of the products
+
 import './Card.scss'
 
 export class Card {

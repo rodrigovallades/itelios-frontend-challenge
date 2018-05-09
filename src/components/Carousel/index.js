@@ -1,3 +1,6 @@
+// The "Carousel" module uses the "Card" (product) module
+// Here we can clearly see one of the advantages of using es6 modules
+
 import Glide from '@glidejs/glide'
 import { Card } from '../Card'
 

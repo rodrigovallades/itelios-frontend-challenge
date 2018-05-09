@@ -15,7 +15,7 @@
 - [x] BEM CSS
 - [x] Mobile-first
 - [x] Nenhuma framework! Somente JS vanilla
-- [x] Única biblioteca é o Glide.js para o carousel (dependency free - pure JS)
+- [x] Única biblioteca é o carousel Glide.js (npm package - dependency free - pure JS)
 
 ## Comentários
 

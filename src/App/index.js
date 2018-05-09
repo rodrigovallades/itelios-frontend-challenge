@@ -18,8 +18,10 @@ export class App {
     if (!this.item.price) {
       this.visitedDom.innerHTML = 'No product visited.'
     } else {
+      let productsHtml = `<h2>Você visitou:</h2>`
       const card = new Card(this.item)
-      this.visitedDom.innerHTML = card.render()
+      productsHtml += card.render()
+      this.visitedDom.innerHTML = productsHtml
     }
   }
 
@@ -27,11 +29,13 @@ export class App {
     if (!this.recommendation.length) {
       this.recommendationDom.innerHTML = 'No recommendations.'
     } else {
-      let productsHtml = ``;
+      let productsHtml = `<h2>e talvez se interesse por:</h2>`
+      productsHtml += `<div class='list'>`
       this.recommendation.map((product, index) => {
         const card = new Card(this.item)
         productsHtml += card.render()
       });
+      productsHtml += `</div>`
       this.recommendationDom.innerHTML = productsHtml
     }
   }

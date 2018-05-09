@@ -13,7 +13,7 @@ export class App {
   }
 
   getProducts() {
-    return fetch('./products.json');
+    return fetch('products.json');
   }
 
   renderVisited() {

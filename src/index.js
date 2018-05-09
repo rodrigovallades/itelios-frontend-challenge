@@ -1,4 +1,5 @@
 import 'normalize.css'
+
 import './styles/base/_global.scss'
 
 import { App } from './App'

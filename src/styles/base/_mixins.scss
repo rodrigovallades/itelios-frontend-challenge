@@ -3,9 +3,17 @@
     @media (min-width: 500px) { @content; }
   }
   @else if $point == medium {
-    @media (min-width: 760px) { @content; }
+    @media (min-width: 780px) { @content; }
   }
   @else if $point == large {
     @media (min-width: 1233px) { @content; }
+  }
+}
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
   }
 }

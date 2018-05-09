@@ -30,19 +30,18 @@
 }
 
 products {
+
+  @include clearfix;
+
   @include breakpoint(medium) {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    min-height: 0;
-    min-width: 0;
-    max-width: 760px;
+    display: block;
+    width: 780px;
     margin-left: auto;
     margin-right: auto;
   }
 
   @include breakpoint(large) {
-    max-width: 1233px;
+    width: 1233px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -51,13 +50,14 @@ products {
 visited {
   display: block;
   @include breakpoint(medium) {
-    flex: 0 0 33%;
-    min-height: 0;
-    min-width: 0;
+    // flex: 0 0 33%;
+    width: 33%;
+    float: left;
   }
 
   @include breakpoint(large) {
-    flex: 0 0 25%;
+    // flex: 0 0 25%;
+    width: 25%;
   }
 }
 
@@ -66,32 +66,44 @@ recommendation {
 
   & .product {
     margin-bottom: 5px;
+
+    &__actions {
+      @include breakpoint(medium) {
+        margin-left: -1px;
+      }
+    }
+
   }
 
   @include breakpoint(medium) {
-    flex: 0 0 67%;
-    min-height: 0;
-    min-width: 0;
-
-    & .products {
-      display: flex;
-      flex-wrap: nowrap;
-      overflow: hidden;
-    }
+    // flex: 0 0 67%;
+    float: left;
+    width: 67%;
 
     & .product {
       margin-bottom: 0;
-      border-left: 0;
-      flex: 0 0 calc(100% / 2);
+      float: left;
+      width: 50%;
+      // flex: 0 0 calc(100% / 2);
+
+      &__border {
+        border-left: 0;
+      }
     }
   }
   @include breakpoint(large) {
-    flex: 0 0 75%;
-    min-height: 0;
-    min-width: 0;
+    // flex: 0 0 75%;
+    width: 75%;
 
     & .product {
-      flex: 0 0 calc(100% / 3);
+      width: calc(100% / 3);
     }
   }
+}
+
+.glide__bullets {
+  visibility: hidden;
+}
+.glide--carousel .glide__bullets {
+  visibility: visible;
 }

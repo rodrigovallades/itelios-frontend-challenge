@@ -1,5 +1,6 @@
-import './App.scss'
 import { Card } from '../components/Card'
+
+import './App.scss'
 
 export class App {
   constructor() {
@@ -16,7 +17,7 @@ export class App {
 
   renderVisited() {
     if (!this.item.price) {
-      this.visitedDom.innerHTML = 'No product visited.'
+      this.visitedDom.innerHTML = '<h2>Nenhum produto.</h2>'
     } else {
       let productsHtml = `<h2>Você visitou:</h2>`
       const card = new Card(this.item)
@@ -27,10 +28,10 @@ export class App {
 
   renderRecommendation() {
     if (!this.recommendation.length) {
-      this.recommendationDom.innerHTML = 'No recommendations.'
+      this.recommendationDom.innerHTML = '<h2>Sem recomendações.</h2>'
     } else {
       let productsHtml = `<h2>e talvez se interesse por:</h2>`
-      productsHtml += `<div class='list'>`
+      productsHtml += `<div class='products'>`
       this.recommendation.map((product, index) => {
         const card = new Card(this.item)
         productsHtml += card.render()

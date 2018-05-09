@@ -3,13 +3,11 @@ import './Card.scss'
 export class Card {
 
   constructor(product) {
-    const { businessId, imageName, name, price } = product;
-    const { paymentConditions } = product.productInfo;
-    this.businessId = businessId
-    this.imageName = imageName
-    this.name = name
-    this.price = price
-    this.paymentConditions = paymentConditions
+    this.businessId = product.businessId
+    this.imageName = product.imageName
+    this.name = product.name
+    this.price = product.price
+    this.paymentConditions = product.productInfo.paymentConditions
   }
 
   render() {

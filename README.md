@@ -20,7 +20,7 @@
 ## Comentários (IMPORTANTE!)
 
 - As imagens fornecidas no 'products.json' não funcionam. Coloquei um ícone representando imagens quebradas.
-- A única diferença em relação ao layout proposto é a quantidade de bullets abaixo do carousel. Isso porque o biblioteca Glide.js não suporta paginação; apenas é possível fazer 1 bullet para cada item do carousel. Entretrando, escolhi ela por ser responsível e suportar breakpoints. Tem sempre um trade-off em cada escolha que fazemos. O ponto é: modificar a biblioteca para suportar paginação estaria fora do escopo deste teste.
+- A única diferença em relação ao layout proposto é a quantidade de bullets abaixo do carousel. Isso porque o biblioteca Glide.js não suporta paginação; apenas é possível fazer 1 bullet para cada item do carousel. Entretrando, escolhi ela por ser responsiva e suportar breakpoints. Tem sempre um trade-off em cada escolha que fazemos. O ponto é: modificar a biblioteca para suportar paginação estaria fora do escopo deste teste.
 
 ## Getting started
 

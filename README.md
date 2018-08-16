@@ -5,6 +5,10 @@
   - Rodrigo Vallades [rodrigo.vallades@gmail.com]
   - GitHub: https://github.com/rodrigovallades
   - Linkedin: http://lnkd.in/p9wz2A
+  
+## Preview
+
+https://vallades-itelios-frontend-challenge.netlify.com/
 
 ## Tecnologias, técnicas e boas práticas
 
